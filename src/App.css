@@ -32,6 +32,12 @@ main {
   align-items: center;
 }
 
+.todo:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  border: 2px solid rgb(99, 196, 86);
+}
+
 .todo-text {
   color: black;
   padding: 8px
@@ -43,6 +49,16 @@ main {
 
 .todo-customise {
   display: flex;
-  width: 90px;
+  width: 120px;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.todo-customise p {
+  color: rgba(87, 82, 82, 0.884)
+}
+
+.tick-icon {
+  font-size: 24px;
+  color: rgb(57, 129, 48);
 }

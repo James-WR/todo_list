@@ -1,12 +1,14 @@
 import React from 'react';
 import Todo from './Todo'
 
-export default function TodoList() {
+export default function TodoList(props) {
+  const todoElements = props.tasks.map(task => {
+    return <Todo key={task.id} id={task.id} name={task.name} completed={task.completed}
+    toggleCompleted={task.toggleCompleted}/>
+  })
   return (
     <div className="todo-container">
-      <Todo/>
-      <Todo/>
-      <Todo/>
+      {todoElements}
     </div>
   )
 }
