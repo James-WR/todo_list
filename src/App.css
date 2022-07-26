@@ -1,7 +1,7 @@
 main {
   background-color: rgb(125, 113, 158);
   width: 60%;
-  color: white;
+  color: rgb(250, 246, 246);
   margin: 0 auto;
   border-radius: 8px;
 }
@@ -20,7 +20,9 @@ main {
 .todo-form input {
   width: 45%;
   border-radius: 8px;
-  border: none
+  border: none;
+  text-indent: 10px;
+  font-size: 16px;
 }
 
 .todo-form input::placeholder {

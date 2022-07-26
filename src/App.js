@@ -47,7 +47,7 @@ function App() {
 
   return (
     <main>
-      <h1 className="main-title">To Do List</h1>
+      <h1 className="main-title">My Tasks for Today</h1>
       <div className="todo-form">
         <input placeholder='Add a new task' ref={taskRef}></input>
         <button className="todo-button" style={{ backgroundColor: "rgb(16, 255, 144)" }} onClick={addTask}><strong>Add Task</strong></button>
