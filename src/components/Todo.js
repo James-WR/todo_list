@@ -6,10 +6,14 @@ export default function Todo(props) {
   const styles = {
     backgroundColor: props.completed ? "#8fff86" : "lightblue",
   }
+  const isComplete = {
+    color: props.completed ? "grey" : "black",
+    fontWeight: props.completed ? "400" : "bold"
+  }
   return (
     <div className="todo" onClick={() => props.toggleCompleted(props.id)} style={styles}>
       <div className="todo-tick-and-text">
-        <p className="todo-text">{props.name}</p>
+        <p className="todo-text" style={isComplete}>{props.name}</p>
         {props.completed && <FontAwesomeIcon icon={faCheck} className="tick-icon"/>}
       </div>
       <div className="delete-button" onClick={(e) => props.deleteTask(e, props.id)}>
