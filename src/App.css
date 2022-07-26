@@ -1,6 +1,6 @@
 main {
-  background-color: black;
-  width: 65%;
+  background-color: rgb(125, 113, 158);
+  width: 60%;
   color: white;
   margin: 0 auto;
   border-radius: 8px;
@@ -18,18 +18,39 @@ main {
 }
 
 .todo-form input {
-  width: 45%
+  width: 45%;
+  border-radius: 8px;
+  border: none
+}
+
+.todo-form input::placeholder {
+  font-size: 15px;
+  padding: 4px
+}
+
+.todo-button {
+  border-radius: 8px;
+  border: none;
+  margin-left: 8px;
+  padding: 12px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.todo-button:hover {
+  transform: scale(1.05);
 }
 
 .todo {
   background-color: lightblue;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   max-width: 400px;
   height: 40px;
   border-radius: 8px;
-  margin: 16px auto;
+  margin: 24px auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .todo:hover {
@@ -40,17 +61,16 @@ main {
 
 .todo-text {
   color: black;
-  padding: 8px
+  padding: 8px;
+  font-weight: bold
 }
 
 .todo-container {
   padding: 8px;
 }
 
-.todo-customise {
+.todo-tick-and-text {
   display: flex;
-  width: 120px;
-  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -58,7 +78,20 @@ main {
   color: rgba(87, 82, 82, 0.884)
 }
 
+.delete-button {
+  padding: 8px
+}
+
 .tick-icon {
   font-size: 24px;
   color: rgb(57, 129, 48);
+}
+
+.bin-icon {
+  color: rgb(165, 163, 163)
+}
+
+.bin-icon:hover {
+  transform: scale(1.2);
+  color: rgb(109, 106, 106);
 }

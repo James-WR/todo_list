@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 export default function Todo(props) {
   const styles = {
@@ -8,11 +8,12 @@ export default function Todo(props) {
   }
   return (
     <div className="todo" onClick={() => props.toggleCompleted(props.id)} style={styles}>
-      <p className="todo-text">{props.name}</p>
-      <div className="todo-customise">
+      <div className="todo-tick-and-text">
+        <p className="todo-text">{props.name}</p>
         {props.completed && <FontAwesomeIcon icon={faCheck} className="tick-icon"/>}
-        <p>Edit</p>
-        <p>Delete</p>
+      </div>
+      <div className="delete-button" onClick={(e) => props.deleteTask(e, props.id)}>
+        <FontAwesomeIcon icon={faTrash} className="bin-icon" />
       </div>
     </div>
   )
